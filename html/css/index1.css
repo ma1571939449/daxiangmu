@@ -1,0 +1,61 @@
+/*导航栏里的下划线*/
+.nav_line{
+	display: inline-block;
+	width:54px;
+	border:1px solid red;
+	border-width:1px 1px 0 1px;
+	position:absolute;
+	left:40px;
+	top:72px;
+	transition:all 1s ease;
+}
+/*轮播图部分*/
+#roll{
+	width:100%;
+	height:560px;
+	position:relative;
+	overflow: hidden;
+}
+.roll_image{
+	width:300%;
+	height:100%;
+	position:absolute;
+	left:0px;
+	top:0px;
+	transition:all 1s ease;
+}
+.roll_image1{
+	display: inline-block;
+	width:33.33333%;
+	height:560px;
+	background: url("../img/banner-1.jpg") center center no-repeat;
+}
+.roll_image2{
+	display: inline-block;
+	width:33.33333%;
+	height:560px;
+	background: url("../img/banner-3.jpg") center center no-repeat;
+}
+.roll_image3{
+	display: inline-block;
+	width:33.33333%;
+	height:560px;
+	background: url("../img/banner-2.jpg") center center no-repeat;
+}
+.roll_list{
+	width:100%;
+	text-align: center;
+	height:25px;
+	position:absolute;
+	top:80%;
+}
+.roll_list>span{
+	display: inline-block;
+	width:50px;
+	height:20px;
+	margin:0 7px;
+	border-bottom: 2px solid #fff;
+}
+.roll_list>.on{
+	border-bottom: 2px solid #E71F19;
+}

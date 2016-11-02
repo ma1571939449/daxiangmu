@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>找回密码</title>
+		<link rel="stylesheet" type="text/css" href="../css/retrieve.css"/>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="head">
+				<a href="###" id="home">
+					<img src="../img/logo.jpg"/>
+					<span>
+						账号设置
+					</span>
+				</a>
+				<div id="link">
+					<a href="login.html" id="login_link">登录</a>
+					<a href="logon.html" id="logon_link">注册</a>
+				</div>
+			</div>
+			<div id="line">
+				<div>找回密码</div>
+			</div>
+			<ul class="main_nav">
+				<li class="main_nav1">确认账号</li>
+				<li class="main_nav2">安全验证</li>
+				<li class="main_nav3">重置密码</li>
+			</ul>
+			<div id="main1">
+				<p id="phone_text">
+					<input type="text" name="phone" id="phone" placeholder="请输入手机号">
+					<span class="phone_judge">请您输入手机号</span>
+				</p>
+				<p id="num1_text">
+					<input type="text" name="num1" id="num1" placeholder="请输入验证码">
+					<img class="num1_image" src="../img/01.png"/>
+					<a class="btn_num1" href="###">换一张</a>
+					<span class="num1_judge">请输入验证码</span>
+				</p>
+				<button class="btn_next1">下一步</button>
+			</div>
+			<div id="main2">
+				<p class="main2_title">为了你的账号安全，请完成身份验证</p>
+				<h3>手机验证</h3>
+				<p class="main2_phone">
+					<span>手机号:</span>
+					<strong class="main2_phone_text"></strong>
+				</p>
+				<p class="main2_num">验证码:</p>
+				<div id="num2-text">
+					<input type="text" name="num2" id="num2" placeholder="手机验证码">
+					<button class="btn_num2">发送验证码</button>
+					<span class="num2_judge">您还没获取验证码</span>
+				</div>
+				<button class="btn_next2">下一步</button>
+			</div>
+			<div id="main3">
+				<p class="main3_success">
+					<span class="main3_success_text">密码修改成功</span>
+				</p>
+				<p class="main3_user_name">
+					您正在找回的账号是:
+					<span class="main3_user_name_text"></span>
+				</p>
+				<div class="main3_user_pwd1">
+					<span>新密码</span>
+					<input type="password" name="new_pwd1" id="new_pwd1" placeholder="请输入新密码">
+					<strong class="new_pwd1_judge1">请填写密码</strong>
+					<ul class="new_pwd1_judge2">
+						<li>◆</li>
+						<li>◆</li>
+						<li class="new_pwd1_judge2_text1">
+							<span class="new_pwd1_judge2_mark1"></span>
+							长度为6-14个字符
+						</li>
+						<li class="new_pwd1_judge2_text2">
+							<span class="new_pwd1_judge2_mark2"></span>
+							支持数字，大小写
+						</li>
+						<li class="new_pwd1_judge2_text3">
+							<span class="new_pwd1_judge2_mark3"></span>
+							不允许出现空格
+						</li>
+					</ul>
+				</div>
+				<div class="main3_user_pwd2">
+					<span>确认新密码</span>
+					<input type="password" name="new_pwd2" id="new_pwd2" placeholder="请输入确认密码">
+					<strong class="new_pwd2_judge">请输入确认密码</strong>
+				</div>
+				<button class="btn_submit">确认</button>
+			</div>
+		</div>
+		<script src="../js/retrieve.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,194 @@
+*{
+	margin:0;
+	padding:0;
+	font-size: 12px;
+	color: #666;
+}
+em,i{
+	font-style:normal;
+}
+a{
+	text-decoration:none;
+}
+a:hover{
+	color:#2E82FF;
+	text-decoration: underline;
+}
+img{
+	border:none;
+}
+li{
+	list-style: none;
+}
+#wrap{
+	width:100%;
+}
+#title{
+	width:980px;
+	height:75px;
+	position:relative;
+	margin:0px auto;
+}
+#home{
+	position: absolute;
+	left:0px;
+}
+#home img{
+	padding-top:15px;
+	width:160px;
+}
+#home span{
+	font-size:18px;
+	border-left:1px solid #999;
+	padding-left:15px;
+	margin-left:15px;
+	position:relative;
+	top:-8px;
+}
+#login{
+	position:absolute;
+	right:0px;
+	height:32px;
+	top:21px;
+}
+#login span{
+	vertical-align: middle;
+}
+#login a{
+	vertical-align: middle;
+	display: inline-block;
+	width:64px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	border:1px solid #bbb;
+	border-radius: 4px;
+	background: #eee;
+	font-weight: bold;
+}
+#login a:hover{
+	text-decoration: none;
+	color:#666;
+}
+#line{
+	height:20px;
+	width:100%;
+	background: url("../img/4.png") center center no-repeat;
+}
+/*------------------------------主体部分----------------------------*/
+#main{
+	width:720px;
+	margin:0px auto;
+	position:relative;
+}
+
+i{
+	display: inline-block;
+	width:20px;
+	height:20px;
+	vertical-align: middle;
+	display: none;
+}
+.pass_marks{
+	display:none;;
+	padding-left:40px;
+	width:318px;
+	height:33px;
+	font-size:16px;
+	line-height: 33px;
+	background:url("../img/5.png") -64px -47px no-repeat;
+}
+.pass_text{
+	width:645px;
+	height:40px;
+	padding-left:75px;
+}
+.logon_name,.logon_phone,.logon_pwd,.logon_num{
+	width:100%;
+	height:42px;
+	margin-bottom:20px;
+}
+.logon_name>span:nth-child(1),.logon_phone>span:nth-child(1),.logon_pwd>span:nth-child(1),.logon_num>span:nth-child(1){
+	display: inline-block;
+	width:65px;
+	height:42px;
+	margin-right:10px;
+	text-align: right;
+	line-height: 42px;
+	font-size: 14px;
+	font-weight:bold;
+}
+.logon_name>input,.logon_phone>input,.logon_pwd>input,.logon_num>input{
+	width:328px;
+	margin-right:10px;
+	padding:11px 10px;
+	font-size:14px;
+	border:1px solid #bbb;
+}
+.logon_num_judge,.logon_phone_judge,.logon_pwd_judge{
+	display:none;
+}
+.logon_name_judge{
+	display: inline-block;
+	width:250px;
+	height:32px;
+	line-height:16px;
+	vertical-align: middle;
+	display:none;
+}
+.pwd_mark{
+	padding-left: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	width:0px;
+	color:#fc4343;
+}
+.arrow{
+	position:relative;
+	display: none;
+}
+.arrow>em:nth-child(2){
+	color:#ccc;
+	position:relative;
+	left:-14px;
+}
+.logon_pwd_judge{
+	width:200px;
+	height:60px;
+	border:1px solid #999;
+	line-height: 20px;
+	position: absolute;
+	top:248px;
+	left:448px;
+	background: #fff;
+}
+.logon_pwd_judge>li{
+	display: inline-block;
+	vertical-align: middle;
+}
+.logon_pwd_judge>li>span{
+	display: inline-block;
+	width:20px;
+	height:20px;
+	background: url("../img/5.png") -83px -113px no-repeat;
+	vertical-align: middle;
+}
+.protocol{
+	display: block;
+	height:17px;
+	line-height: 17px;
+	margin:0 0 20px 75px;
+}
+.protocol>a{
+	color:#2E82FF;
+}
+#btn_logon{
+	margin-left:75px;
+	width:350px;
+	height:50px;
+	background: rgb(63,137,236);
+	border-radius: 3px;
+	font-size:16px;
+	color:#fff;
+	outline:none;
+}

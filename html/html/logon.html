@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/logon.css"/>
+	</head>
+	<body>
+		<div id="wrap">
+
+			<!-- ------------------title------------------------ -->
+			<div id="title">
+				<a href="###" id="home">
+					<img src="../img/logo.jpg"/>
+					<span>
+						注册爱维时空账号
+					</span>
+				</a>
+				<div id="login">
+					<span>
+						我已注册，现在就
+					</span>
+					<a href="login.html">
+							登录
+					</a>
+				</div>
+			</div>
+			<div id="main">
+				<div id="line"></div>
+				<div class="pass_text">
+					<i class="pass_marks">账号注册成功</i>
+				</div>
+				<p class="logon_name">
+					<span>用户名</span>
+					<input type="text" name="logon_Name" id="logon_Name" placeholder="请设置用户名">
+					<i class="name_mark"></i>
+					<span class="logon_name_judge">设置后不可更改<br>中英文均可，最长14个英文或7个汉字</span>
+					<!--<span>❌用户名仅支持中英文、数字和下划线,且不能为纯数字</span>-->
+				</p>
+				<p class="logon_phone">
+					<span>手机号</span>
+					<input type="text" name="phone" id="phone" placeholder="可用于登录和找回密码">
+					<i class="phone_mark"></i>
+					<span class="logon_phone_judge">请输入中国大陆手机号</span>
+					<!--<span>手机号码格式不对</span>-->
+				</p>
+				<p class="logon_num">
+					<span>验证码</span>
+					<input type="text" name="num" id="num" placeholder="请输入验证码">
+					<i class="num_mark"></i>
+					<span class="logon_num_judge">请输入验证码</span>
+				</p>
+				<p class="logon_pwd">
+					<span>密码</span>
+					<input type="text" name="pwd" id="pwd" placeholder="请设置东路密码">
+					<i class="pwd_mark">请输入密码</i>
+					<span class="arrow">
+						<em>◆</em>
+						<em>◆</em>
+					</span>
+				</p>
+				<ul class="logon_pwd_judge">
+					<li class="logon_pwd_judge_text1">
+						<span class="logon_pwd_judge_mark1"></span>
+						长度为6-14个字符
+					</li>
+					<li class="logon_pwd_judge_text2">
+						<span class="logon_pwd_judge_mark2"></span>
+						支持数字、大小写、下划线
+					</li>
+					<li class="logon_pwd_judge_text3">
+						<span class="logon_pwd_judge_mark3"></span>
+						不允许出现空格
+					</li>
+				</ul>
+				<p class="protocol">
+					<input type="checkbox" name="checkbox" id="check" checked>
+					阅读并接受
+					<a href="agreement.html">
+						《百度用户协议》
+					</a>
+				</p>
+				<button id="btn_logon">注册</button>
+			</div>
+		</div>
+		<script src="../js/logon.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
