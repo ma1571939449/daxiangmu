@@ -91,66 +91,108 @@ nav();
 nav_on();
 
 //--------------------------------------------------------------------第2-4部分共用部分
-//封装ajax函数
-
 
 
 // --------------------------------------------------------------------------第二部分
-var section2_content = $(".section2_content");
 var section2_main_box = $(".section2_main_box");
-
 //创建标签函数
-function createBYdata(href,obj){
+function createBYdata1(oUl,href,obj){
 	for (var i = 0; i < obj.length; i++) {
 			var oLi = $("<li/>");
-			section2_main_box.append(oLi);
+			oUl.append(oLi);
 			var a1 = $("<a href=" + href +"><img src=\"../img/" + obj[i].example_image + "\"></img></a>");
 			oLi.append(a1);
-			var oDiv = $("<div><a href=" + href + "\">" + obj[i].example_h3 + "</a></div>");
+			var oDiv = $("<div><a href=" + href + ">" + obj[i].example_h3 + "</a></div>");
 			oLi.append(oDiv);
-			if(obj[i].example_p){
-				var p = $("<p>" + obj[i].example_p + "</p>");
-				oLi.append(p);
-			}
+			var p = $("<p>" + obj[i].example_p + "</p>");
+			oLi.append(p);
 		}
 }
-
-//标签样式函数
-function section2_style(){
-	var oLi = section2_main_box[0].children;
-	console.log(oLi);
-	if($(document).width() >= 1200){
-		section2_content.css({
-			width:1200 + "px"
-		}),
-		section2_main_box.css({
-			width:1260 + "px"
-		})
-	}else{
-		section2_content.css({
-			width:968 + "px"
-		}),
-		section2_main_box.css({
-			width:1028 + "px"
-		})
-	}
-}
-
 //使用数据库函数：调用ajax函数  调用标签创建  调用标签样式
-function myajax (type,num,href) {
+function myajax1 (type,num,oUl,href) {
 	var url = "../../php/php/index1.php?Type=" + type + "&Num=" + num;
 	requestAjax(url, function(obj) {
-		createBYdata(href,obj);
-		section2_style();
+		createBYdata1(oUl,href,obj);
 	})
 }
-
 //调用使用数据库的函数
-myajax("example_type1","1","###");
-
-
-
-
+myajax1("example_type1","1",section2_main_box,"###");
+// --------------------------------------------------------------------------第三部分
+var section3_main_box = $(".section3_main_box");
+//创建标签函数
+function createBYdata2(oUl,href,obj){
+	for (var i = 0; i < obj.length; i++) {
+			var oLi = $("<li/>");
+			oUl.append(oLi);
+			var a1 = $("<a href=" + href +"><img src=\"../img/" + obj[i].example_image + "\"></img><div></div></a>");
+			oLi.append(a1);
+			var oDiv = $("<div><a href=" + href + ">" + obj[i].example_h3 + "</a></div>");
+			oLi.append(oDiv);
+		}
+}
+//使用数据库函数：调用ajax函数  调用标签创建  调用标签样式
+function myajax2 (type,num,oUl,href) {
+	var url = "../../php/php/index1.php?Type=" + type + "&Num=" + num;
+	requestAjax(url, function(obj) {
+		createBYdata2(oUl,href,obj);
+	})
+}
+//调用使用数据库的函数
+myajax2("example_type1","2",section3_main_box,"###");
+// --------------------------------------------------------------------------第四部分
+var section4_main_box = $(".section4_main_box");
+//创建标签函数
+function createBYdata3(oUl,href,obj){
+	for (var i = 0; i < obj.length; i++) {
+			var oLi = $("<li/>");
+			oUl.append(oLi);
+			var a1 = $("<a href=" + href +"><img src=\"../img/" + obj[i].example_image + "\"></img></a>");
+			oLi.append(a1);
+			var span = $("<span style=\"background:" +  obj[i].example_span + ";\"></span>");
+			oLi.append(span);
+			var oDiv = $("<div><a href=" + href + ">" + obj[i].example_h3 + "</a></div>");
+			oLi.append(oDiv);
+			var p = $("<p>" + obj[i].example_p + "</p>");
+			oLi.append(p);
+		}
+}
+//使用数据库函数：调用ajax函数  调用标签创建  调用标签样式
+function myajax3 (type,num,oUl,href) {
+	var url = "../../php/php/index1.php?Type=" + type + "&Num=" + num;
+	requestAjax(url, function(obj) {
+		createBYdata3(oUl,href,obj);
+	})
+}
+//调用使用数据库的函数
+myajax3("example_type1","3",section4_main_box,"###");
+// --------------------------------------------------------------------------第五部分
+var section5_main_box = $(".section5_main_box");
+//创建标签函数
+function createBYdata4(oUl,href,obj){
+	for (var i = 0; i < obj.length; i++) {
+			var oLi = $("<li/>");
+			oUl.append(oLi);
+			var oDiv1 = $("<div/>");
+			oLi.append(oDiv1);
+			var img1 = $("<img src=\"../img/" + obj[i].example_image + "\"></img>");
+			oDiv1.append(img1);
+			var span = $("<span>" +  obj[i].example_span + "</span>");
+			oDiv1.append(span);
+			var oDiv = $("<div><a href=" + href + ">" + obj[i].example_h3 + "</a></div>");
+			oDiv1.append(oDiv);
+			var p = $("<p><a href=" + href + ">" + obj[i].example_p + "</a></p>");
+			oDiv1.append(p);
+		}
+}
+//使用数据库函数：调用ajax函数  调用标签创建  调用标签样式
+function myajax4 (type,num,oUl,href) {
+	var url = "../../php/php/index1.php?Type=" + type + "&Num=" + num;
+	requestAjax(url, function(obj) {
+		createBYdata4(oUl,href,obj);
+	})
+}
+//调用使用数据库的函数
+myajax4("example_type1","4",section5_main_box,"###");
 
 
 
