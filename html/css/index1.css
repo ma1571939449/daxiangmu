@@ -1,3 +1,19 @@
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+	color:#000;
+}
+li{
+	list-style: none;
+}
+img{
+	border:none;
+}
+
+/*---------------------------------------------------------------------------*/
 /*导航栏里的下划线*/
 .nav_line{
 	display: inline-block;
@@ -9,6 +25,7 @@
 	top:72px;
 	transition:all 1s ease;
 }
+/*---------------------------------------------------------------------------*/
 /*轮播图部分*/
 #roll{
 	width:100%;
@@ -58,4 +75,67 @@
 }
 .roll_list>.on{
 	border-bottom: 2px solid #E71F19;
+}
+/*---------------------------------------------------------------------------*/
+/*第二部分服务范围*/
+#section{
+	width:100%;
+}
+.section2_content{
+	padding-top:50px;
+	margin:0 auto;
+	text-align: center;
+}
+.section2_content>a{
+	display: inline-block;
+	width:262px;
+	height:78px;
+	margin:0 auto;
+}
+.section2_text{
+	width:580px;
+	height:30px;
+	font-size:14px;
+	margin:14px auto 0px;
+}
+.section2_main_box{
+	margin:30px -60px 0 0;
+}
+.section2_main_box>li{
+	vertical-align: top;
+	width:272px;
+	height:390px;
+	display: inline-block;
+}
+.section2_main_box>li>a{
+	width:100%;
+	height:200px;
+	display: inline-block;
+}
+.section2_main_box>li>a>img{
+	width:100%;
+	height:100%;
+}
+.section2_main_box>li>div{
+	width:100%;
+	height:66px;
+	line-height: 66px;
+	text-align: left;
+}
+.section2_main_box>li>div>a{
+	height:20px;
+	line-height: 20px;
+	font-size:18px;
+	font-family: 微软雅黑, Arial;
+}
+.section2_main_box>li>div>a:hover{
+	color:rgb(261,33,51);
+}
+.section2_main_box>li>p{
+	width:100%;
+	font-size:12px;
+	line-height:24px;
+	font-family: 宋体;
+	text-align: left;
+	color:rgb(136, 136, 136);
 }
