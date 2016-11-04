@@ -18,6 +18,7 @@ img{
 	width:100%;
 	overflow: hidden;
 }
+/*----------------------------------------------------------------------------------------*/
 /*固定定位联系方式*/
 #icons{
 	width:50px;
@@ -104,6 +105,7 @@ img{
 #icons :nth-child(5){
 	background: url("../img/icons.png") -62px -191px no-repeat;
 }
+/*-------------------------------------------------------------------------------------------*/
 /*固定定位返回顶部*/
 #communication_between{
 	width:40px;
@@ -119,10 +121,9 @@ img{
 	height:40px;
 	background: url("../img/10.png") -41px 9px no-repeat;
 }
-
+/*-----------------------------------------------------------------------------------------*/
 /*头部导航栏*/
 #top{
-	width:1200px;
 	height:100px;
 	margin:0px auto;
 }
@@ -134,11 +135,24 @@ img{
 #top>a>img{
 	height:100%;
 }
+@media screen and (max-width:1200px) {
+#top {
+ 	width:968px;
+ }
+.top_title{
+	display: none;
+}
+}
+@media screen and (min-width:1200px) {
+#top {
+ 	width:1200px;
+ }
 .top_title{
 	padding-top:38px;
 	color:#e71f19;
 	font-size:16px;
 	float:left;
+}
 }
 .top_title span{
 	padding-left:15px;
