@@ -3,11 +3,6 @@ var communication_between = $("#communication_between");
 var nav_links = $(".nav_links");
 var nav_links_subset = nav_links.children();
 var nav_line = $(".nav_line");
-var roll = $("#roll");
-var roll_image = $(".roll_image");
-var roll_list = $(".roll_list");
-var roll_list_subset = roll_list.children();
-var timer = null; //轮播图计时器
 
 // -------------------------------------------------------------------------
 // 头部header部分导航栏的下划线
@@ -19,7 +14,11 @@ for(var i = 0; i < nav_links_subset.length; i++) {
 		})
 	})
 }
-
+nav_links.on("mouseleave", function() {
+	nav_line.css({
+		left: 40 + "px"
+	})
+})
 //ajax函数
 function requestAjax(url, callBack) {
 	var request = new XMLHttpRequest();
@@ -37,13 +36,12 @@ function requestAjax(url, callBack) {
 }
 
 // --------------------------------------------------------------------------第一部分
+var roll = $("#roll");
+var roll_image = $(".roll_image");
+var roll_list = $(".roll_list");
+var roll_list_subset = roll_list.children();
+var timer = null; //轮播图计时器
 //轮播图，自动轮播
-nav_links.on("mouseleave", function() {
-	nav_line.css({
-		left: 40 + "px"
-	})
-})
-
 function nav() {
 	var offY = roll_image.position().left / roll.width();
 	var offLeft = Math.floor(offY) * 100;
@@ -193,6 +191,50 @@ function myajax4 (type,num,oUl,href) {
 }
 //调用使用数据库的函数
 myajax4("example_type1","4",section5_main_box,"###");
+// --------------------------------------------------------------------------第六部分
+var section6_main_box = $(".section6_main_box");
+
+
+
+//移入移出效果
+//function liHover(li,img,img1,img2){
+//	li.on("mouseover",function(){
+//		img[0].src = img2;
+//	})
+//	li.on("mouseout",function(){
+//			img[0].src = img1;
+//	})
+//}
+
+
+
+//创建标签函数
+function createBYdata5(oUl,obj){
+	for (var i = 0; i < obj.length; i++) {
+			var oLi = $("<li/>");
+			oUl.append(oLi);
+			var oDiv = $("<div/>");
+			oLi.append(oDiv);
+			var oImg1 = $("<img src=\"../img/" + obj[i].example_content + "\"></img>");
+			oImg1.addClass("img1");
+//			var img1 = "../img/" + obj[i].example_content;
+//			var img2 = "../img/" + obj[i].example_image;
+			oDiv.append(oImg1);
+			var oImg2 = $("<img src=\"../img/" + obj[i].example_image + "\"></img>");
+			oImg2.addClass("img2");
+			oDiv.append(oImg2);
+//			liHover(oLi,oImg,img1,img2);
+		}
+}
+//使用数据库函数：调用ajax函数  调用标签创建  调用标签样式
+function myajax5 (type,num,oUl) {
+	var url = "../../php/php/index1.php?Type=" + type + "&Num=" + num;
+	requestAjax(url, function(obj) {
+		createBYdata5(oUl,obj);
+	})
+}
+//调用使用数据库的函数
+myajax5("example_type1","6",section6_main_box);
 
 
 
